@@ -1,0 +1,10 @@
+site_name: pytest-wframework
+site_description: WFrame is a custom framework that contains an beautiful API that can be used with the testing framework PyTest easily to automate Desktop and Mobile devices and generate both html and excel reports.
+site_author: Ayari Wissem
+
+theme: readthedocs
+
+repo_url: https://github.com/AyariWissem/pytest-wframework
+
+pages:
+- Home: index.md
