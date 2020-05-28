@@ -19,10 +19,10 @@ class excelBuilder:
         report = self.json
         ws = self.ws
         dh = self.dh
-        ws.cell(1, 1, "Test Case Path")
-        ws.cell(1, 2, "Test Case Name")
-        ws.cell(1, 3, "Test Case Status")
-        ws.cell(1, 4, "Messages")
+        ws.cell(1, 1, "Test Case Path").font=Font(b=True)
+        ws.cell(1, 2, "Test Case Name").font=Font(b=True)
+        ws.cell(1, 3, "Test Case Status").font=Font(b=True)
+        ws.cell(1, 4, "Messages").font=Font(b=True)
         y = {"path": 1, "name": 2, "status": 3, "Messages": 4}
         x = 2
         for test in report['tests']:
@@ -42,7 +42,7 @@ class excelBuilder:
                 x += 1
         # setting the width of the columns
         for col in range(ws.min_column, ws.max_column + 1):
-            dh[get_column_letter(col)] = ColumnDimension(ws, min=col, max=col, width=20)
+            dh[get_column_letter(col)] = ColumnDimension(ws, min=col, max=col, width=40)
         ws.column_dimensions=dh
         # saving the report
         try:
