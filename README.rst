@@ -13,8 +13,8 @@ Features
 
 Requirements
 ------------
-python >= 3.6 (it uses the new implementation of string formatting)  
-pip >=20 (if you have an old version, run the command "python -m pip install --upgrade pip")
+- python >= 3.6 (it uses the new implementation of string formatting)  
+- pip >=20 (if you have an old version, run the command "python -m pip install --upgrade pip")
 
 Installation
 ------------
