@@ -6,7 +6,7 @@ from allure_commons import plugin_manager
 from allure_pytest.listener import AllureListener
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-
+from selenium.webdriver.common.by import By
 
 def styleHTML(msg, status, html):  # TODO better implementation for html using the custom message and headers
     """" FAIL, WARING, PASS, DONE use colors, html and excel """
