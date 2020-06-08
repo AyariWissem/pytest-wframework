@@ -98,21 +98,25 @@ class API:
         self.logger.info(msg)
         msg = self.getLog().splitlines()[-1]  # getting the last log message
         self.html = styleHTML(msg, "info", self.html)
+        return True
 
     def debug(self, msg):
         self.logger.debug(msg)
         msg = self.getLog().splitlines()[-1]  # getting the last log message
         self.html = styleHTML(msg, "debug", self.html)
+        return True
 
     def warning(self, msg):
         self.logger.warning(msg)
         msg = self.getLog().splitlines()[-1]  # getting the last log messagessage
         self.html = styleHTML(msg, "warning", self.html)
+        return True
 
     def error(self, msg):
         self.logger.error(msg)
         msg = self.getLog().splitlines()[-1]  # getting the last log message
         self.html = styleHTML(msg, "error", self.html)
+        return False
 
     def critical(self, msg):
         self.logger.critical(msg)
@@ -124,7 +128,8 @@ class API:
         self.logger.message(msg)
         msg = self.getLog().splitlines()[-1]
         self.html = styleHTML(msg, status, self.html)
-
+        return True
+    
     def writeMsginReport(self, msg, status):
         status = status.lower()
         if status in ['pass', 'passed', 'fail', 'failed', 'done']:
@@ -213,7 +218,11 @@ class API:
 
     def search_product(self, locatorType, locator, data):
         self.sendKeys(locatorType, locator, data)
-
+        
+    def getText(self, locatorType, locator):
+        element = self.getElement(locatorType, locator)
+        return element.text
+    
     def get(self, URL):
         return self.driver.get(URL)
 
