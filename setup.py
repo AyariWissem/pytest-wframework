@@ -24,7 +24,7 @@ setup(
     long_description=read('README.rst'),
     packages=['pytest_wframework'],
     python_requires='>=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*',
-    install_requires=['pytest>=5.0.0','selenium>=3.14.0','Appium-Python-Client>=1.0.0','openpyxl>=3.0.0','pytest-json-report>=1.2.0'],
+    install_requires=['pytest>=5.0.0','selenium>=3.14.0','Appium-Python-Client>=1.0.0','openpyxl>=3.0.0','pytest-json-report>=1.2.0','allure-pytest>=2.8.16'],
     classifiers=[
         'Development Status :: 4 - Beta',
         'Framework :: Pytest',
